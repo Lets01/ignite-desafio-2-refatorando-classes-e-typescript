@@ -10,9 +10,11 @@ import { useField } from '@unform/core';
 import { Container } from './styles';
 import { IconType } from 'react-icons/lib';
 
+
 interface inputProps {
   name: string;
-  icon: IconType;
+  placeholder?: string;
+  icon?: IconType;
 }
 
 export const Input = ({ name, icon: Icon, ...rest }: inputProps) => {
