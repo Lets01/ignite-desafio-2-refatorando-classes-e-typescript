@@ -14,7 +14,7 @@ interface ModalAddFoodProps {
 }
 
 
-const ModalAddFood = ({isOpen, setIsOpen, handleAddFood}: ModalAddFoodProps) => {
+export const ModalAddFood = ({isOpen, setIsOpen, handleAddFood}: ModalAddFoodProps) => {
   const formRef = createRef<FormHandles>();
   
   const handleSubmit = async (data: FoodObject) => {
@@ -42,5 +42,3 @@ const ModalAddFood = ({isOpen, setIsOpen, handleAddFood}: ModalAddFoodProps) => 
     );
   
 };
-
-export default ModalAddFood;

@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { FoodObject } from '../../types/FoodType';
 import Header from '../../components/Header';
 import api from '../../services/api';
-import ModalAddFood from '../../components/ModalAddFood';
-import ModalEditFood from '../../components/ModalEditFood';
+import { ModalAddFood } from '../../components/ModalAddFood';
+import { ModalEditFood } from '../../components/ModalEditFood';
 import { FoodsContainer } from './styles';
 import { Food } from '../../components/Food';
 
