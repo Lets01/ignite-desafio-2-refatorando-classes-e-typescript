@@ -26,7 +26,7 @@ export const Dashboard = () => {
     try {
       const response = await api.post('/foods', {
         ...food,
-        available: true,
+        available: false,
       });
       setFoods([...foods, response.data]);
     } catch (err) {
