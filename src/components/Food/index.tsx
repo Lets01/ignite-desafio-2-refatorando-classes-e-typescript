@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { FiEdit3, FiTrash } from 'react-icons/fi';
 import { FoodObject } from '../../types/FoodType';
-import { Container } from './styles';
+import { Container, ContainerHeader } from './styles';
 import api from '../../services/api';
 
 interface FoodProps {
@@ -26,10 +26,10 @@ export const Food = ({food, onDeleteFood, onEditFood}: FoodProps) => {
   }
 
   return (
-    <Container available={isAvailable}>
-      <header>
+    <Container>
+      <ContainerHeader available={isAvailable}>
         <img src={food.image} alt={food.name} />
-      </header>
+      </ContainerHeader>
       <section className="body">
         <h2>{food.name}</h2>
         <p>{food.description}</p>
