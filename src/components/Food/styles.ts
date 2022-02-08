@@ -129,23 +129,21 @@ export const Container = styled.div`
 `;
 
 export const ContainerHeader = styled.header<HeaderProps>`
-  header {
-    background: #ffb84d;
-    border-radius: 8px 8px 0px 0px;
-    height: 192px;
-    overflow: hidden;
-    transition: 0.3s opacity;
-    text-align: center;
+  background: #ffb84d;
+  border-radius: 8px 8px 0px 0px;
+  height: 192px;
+  overflow: hidden;
+  transition: 0.3s opacity;
+  text-align: center;
 
-    ${props =>
-    !props.available &&
-    css`
-        opacity: 0.3;
-      `};
+  ${props =>
+  !props.available &&
+  css`
+      opacity: 0.3;
+    `};
 
-    img {
-      pointer-events: none;
-      user-select: none;
-    }
+  img {
+    pointer-events: none;
+    user-select: none;
   }
 `;
