@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FoodObject } from '../../types/FoodType';
 import Header from '../../components/Header';
 import api from '../../services/api';
@@ -14,10 +14,13 @@ export const Dashboard = () => {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const [editModalOpen, setEditModalOpen] = useState<boolean>(false);
 
-  async function componentDidMount() {
-    const response = await api.get('/foods');
-    setFoods(response.data);
-  }
+  useEffect(() => {
+    async function componentDidMount() {
+      const response = await api.get('/foods');
+      setFoods(response.data);
+    }
+    componentDidMount();
+  }, [])
 
   const handleAddFood = async (food: FoodObject) => {
     try {
